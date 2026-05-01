@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Maison Élara — Luxury fashion crafted with soul and silence."/>
+  <title>MAISON ÉLARA — Luxury Fashion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div><div class="loader-logo">Maison Élara</div><div class="loader-line"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" data-page="home">MAISON ÉLARA</div>
+  <ul class="nav-links">
+    <li><a data-page="home">Home</a></li>
+    <li><a data-page="about">About</a></li>
+    <li><a data-page="products">Shop</a></li>
+    <li><a data-page="contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="showToast('Your cart is empty')">Cart (0)</button>
+    <div class="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="cart-toast"><div class="toast-icon">✓</div><div class="toast-text" id="toast-msg">Added to cart</div></div>
+
+
+<!-- ═══════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO: full-screen editorial -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1800&q=90&fit=crop&crop=center"
+      alt="Maison Élara hero — elegant fashion editorial"
+      fetchpriority="high"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1800&q=90&fit=crop'"
+    />
+    <div class="hero-pattern"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">New Collection · Spring — Summer 2025</div>
+      <h1 class="hero-title">Wear the<br><em>Art of</em><br>Silence</h1>
+      <p class="hero-sub">Crafted for those who speak through elegance</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="navigate('products')"><span>Shop Now</span></button>
+        <button class="btn-outline" onclick="navigate('about')">Our Story</button>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>Discover</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Luxury Craftsmanship <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Timeless Design <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Handcrafted Excellence <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Ethical Fashion <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Premium Fabrics <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Maison Élara · Paris <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Luxury Craftsmanship <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Timeless Design <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Handcrafted Excellence <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Ethical Fashion <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Premium Fabrics <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Maison Élara · Paris <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- FULL-WIDTH FEATURE BANNER -->
+  <div class="feature-banner">
+    <img
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=90&fit=crop&crop=center"
+      alt="Luxury fashion feature — elegant neutral tones"
+      loading="lazy"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=90&fit=crop'"
+    />
+    <div class="feature-banner-overlay">
+      <div class="feature-banner-content reveal">
+        <span class="section-label" style="color:var(--accent-light);">SS 2025 Edit</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300;color:var(--cream);line-height:1.1;margin:0.5rem 0 1.5rem;">The Season's<br><em>Defining Silhouette</em></h2>
+        <button class="btn-primary" onclick="navigate('products')"><span>Discover the Edit</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS GRID -->
+  <section class="collections">
+    <div class="collections-header reveal">
+      <div>
+        <span class="section-label">Curated Edits</span>
+        <h2 class="section-title">This Season's<br><em>Collections</em></h2>
+      </div>
+      <a class="collections-link" onclick="navigate('products')">View All →</a>
+    </div>
+    <div class="collections-grid stagger">
+
+      <div class="collection-card" onclick="navigate('products')">
+        <img class="collection-img"
+          src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=90&fit=crop&crop=top"
+          alt="L'Aube Collection — elegant womenswear"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=90&fit=crop&crop=top'"
+        />
+        <div class="collection-info">
+          <span class="collection-tag">Womenswear</span>
+          <div class="collection-name">L'Aube<br>Collection</div>
+          <span class="collection-cta">Explore</span>
+        </div>
+      </div>
+
+      <div class="collection-card" onclick="navigate('products')">
+        <img class="collection-img"
+          src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=700&q=90&fit=crop&crop=top"
+          alt="Urbain Édit — refined menswear"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=90&fit=crop&crop=top'"
+        />
+        <div class="collection-info">
+          <span class="collection-tag">Menswear</span>
+          <div class="collection-name">Urbain<br>Édit</div>
+          <span class="collection-cta">Explore</span>
+        </div>
+      </div>
+
+      <div class="collection-card" onclick="navigate('products')">
+        <img class="collection-img"
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700&q=90&fit=crop&crop=top"
+          alt="Capsule Éclat — new arrivals"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700&q=90&fit=crop&crop=top'"
+        />
+        <div class="collection-info">
+          <span class="collection-tag">New Arrivals</span>
+          <div class="collection-name">Capsule<br>Éclat</div>
+          <span class="collection-cta">Explore</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPLIT LOOKBOOK SECTION -->
+  <section class="lookbook-split">
+    <div class="lookbook-img lookbook-img-left reveal-left">
+      <img
+        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=90&fit=crop&crop=top"
+        alt="Élara lookbook — elegant women editorial"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=90&fit=crop&crop=top'"
+      />
+      <div class="lookbook-label"><span>Look 01</span><em>L'Aube Coat</em></div>
+    </div>
+    <div class="lookbook-text reveal">
+      <span class="section-label">Lookbook SS 2025</span>
+      <h2 class="section-title">Dressed in<br><em>Stillness</em></h2>
+      <p style="font-size:.95rem;font-weight:300;color:var(--text-muted);line-height:1.85;margin:1.5rem 0 2rem;">Each look is a study in restraint. Silhouettes that breathe. Fabrics that move with the body rather than against it. This is dressing with intention.</p>
+      <button class="btn-primary" onclick="navigate('products')"><span>View Lookbook</span></button>
+    </div>
+    <div class="lookbook-img lookbook-img-right reveal-right">
+      <img
+        src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800&q=90&fit=crop&crop=top"
+        alt="Élara lookbook — elegant men editorial"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=90&fit=crop&crop=top'"
+      />
+      <div class="lookbook-label"><span>Look 02</span><em>Urbain Édit</em></div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY TEASER -->
+  <section class="brand-story">
+    <div class="brand-story-inner">
+      <div class="story-visual reveal-left">
+        <img class="story-photo"
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800&q=90&fit=crop&crop=top"
+          alt="Maison Élara designer — atelier portrait"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=90&fit=crop&crop=top'"
+        />
+        <div class="story-frame"></div>
+        <div class="story-badge"><span>Est.</span><span>Paris 2008</span></div>
+      </div>
+      <div class="story-content reveal-right">
+        <span class="section-label">Our Atelier</span>
+        <h2 class="section-title">Rooted in<br><em>Craft &amp; Purpose</em></h2>
+        <p class="story-body">Born in a small Parisian atelier in 2008, Maison Élara was founded on a single conviction: that true luxury is not noise, but quiet precision. Every stitch, every silhouette, every fabric is chosen to outlast the moment.</p>
+        <button class="btn-primary" onclick="navigate('about')"><span>Our Story</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="products-section" style="padding-bottom:5rem;">
+    <div class="products-header reveal">
+      <div>
+        <span class="section-label">Best Sellers</span>
+        <h2 class="section-title">Trending<br><em>Right Now</em></h2>
+      </div>
+      <a class="collections-link" onclick="navigate('products')">Shop All →</a>
+    </div>
+    <div class="products-grid stagger" id="home-products-grid"></div>
+  </section>
+
+  <!-- EDITORIAL MOOD STRIP -->
+  <div class="mood-strip stagger">
+    <div class="mood-frame">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=90&fit=crop&crop=top"
+        alt="Élara mood — editorial 1" loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=90&fit=crop&crop=top'"/>
+      <div class="mood-caption">Womenswear</div>
+    </div>
+    <div class="mood-frame">
+      <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=500&q=90&fit=crop&crop=top"
+        alt="Élara mood — editorial 2" loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=90&fit=crop&crop=top'"/>
+      <div class="mood-caption">Menswear</div>
+    </div>
+    <div class="mood-frame">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=90&fit=crop&crop=top"
+        alt="Élara mood — editorial 3" loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=90&fit=crop&crop=top'"/>
+      <div class="mood-caption">New Season</div>
+    </div>
+    <div class="mood-frame">
+      <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&q=90&fit=crop&crop=top"
+        alt="Élara mood — editorial 4" loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=90&fit=crop&crop=top'"/>
+      <div class="mood-caption">The Edit</div>
+    </div>
+    <div class="mood-frame">
+      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&q=90&fit=crop&crop=top"
+        alt="Élara mood — editorial 5" loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&q=90&fit=crop&crop=top'"/>
+      <div class="mood-caption">Essentials</div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">What They Say</span>
+      <h2 class="section-title">Words from Our<br><em>Community</em></h2>
+    </div>
+    <div class="testimonials-grid stagger">
+      <div class="testimonial-card"><span class="quote-mark">"</span><p class="testimonial-text">Maison Élara changed how I think about getting dressed. Every piece feels like it was made specifically for me. The quality is simply unmatched.</p><div class="testimonial-author"><div class="author-avatar">S</div><div><div class="author-name">Sophia Marchetti</div><div class="author-title">Milan, Italy</div></div></div></div>
+      <div class="testimonial-card"><span class="quote-mark">"</span><p class="testimonial-text">I've never experienced such meticulous attention to fabric and cut. These aren't just clothes — they're wearable architecture.</p><div class="testimonial-author"><div class="author-avatar">J</div><div><div class="author-name">James Harlow</div><div class="author-title">London, UK</div></div></div></div>
+      <div class="testimonial-card"><span class="quote-mark">"</span><p class="testimonial-text">Every season I anticipate their new collection. Élara captures a feeling — effortless, refined, deeply personal. It's fashion as philosophy.</p><div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Amara Diallo</div><div class="author-title">Paris, France</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="reveal" style="max-width:540px;margin:0 auto;">
+      <span class="section-label">Stay Connected</span>
+      <h2 class="section-title">Elevate Your<br><em>Inbox</em></h2>
+      <p class="newsletter-sub">Exclusive previews, private sales, and editorials curated for the discerning few.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" id="nl-home" placeholder="Your email address"/>
+        <button class="newsletter-submit" onclick="handleNewsletter('nl-home')">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div><div class="footer-brand-name">Maison Élara</div><p class="footer-tagline">Quiet luxury. Conscious craft. Timeless by design.</p><div class="footer-socials"><a class="social-link" title="Instagram">In</a><a class="social-link" title="Pinterest">Pi</a><a class="social-link" title="Twitter">Tw</a><a class="social-link" title="Facebook">Fb</a></div></div>
+      <div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a onclick="navigate('home')">Home</a></li><li><a onclick="navigate('about')">About Us</a></li><li><a onclick="navigate('products')">Shop</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Collections</div><ul class="footer-links"><li><a>Womenswear</a></li><li><a>Menswear</a></li><li><a>New Arrivals</a></li><li><a>Sale</a></li><li><a>Accessories</a></li></ul></div>
+      <div><div class="footer-col-title">Support</div><ul class="footer-links"><li><a>Size Guide</a></li><li><a>Shipping Info</a></li><li><a>Returns</a></li><li><a>Care Guide</a></li><li><a>Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2025 Maison Élara. All rights reserved. Designed with intention.</span><span class="footer-copy">Paris · London · New York</span></div>
+  </footer>
+</div><!-- /home -->
+
+
+<!-- ═══════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <div class="about-hero">
+    <img class="about-hero-bg"
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=90&fit=crop&crop=center"
+      alt="Luxury fashion atelier"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1800&q=90&fit=crop'"
+    />
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content reveal">
+      <h1>Crafted with<br><em>Soul &amp; Silence</em></h1>
+      <p>The Maison Élara Story</p>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <section class="about-values">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">What Drives Us</span>
+      <h2 class="section-title">Our <em>Pillars</em></h2>
+    </div>
+    <div class="values-grid stagger">
+      <div class="value-card"><div class="value-num">01</div><div class="value-title">Quiet Mastery</div><p class="value-text">We believe the loudest statement a garment can make is perfect silence. Our designers spend months refining a single silhouette until it speaks only through its presence.</p></div>
+      <div class="value-card"><div class="value-num">02</div><div class="value-title">Conscious Origin</div><p class="value-text">Every thread is traced back to its source. We partner exclusively with certified mills in Italy, Japan, and Portugal who share our commitment to the earth and its makers.</p></div>
+      <div class="value-card"><div class="value-num">03</div><div class="value-title">Enduring Form</div><p class="value-text">We design against the season. Maison Élara garments are conceived to live beyond trends — investments in your wardrobe and in a slower, more thoughtful way of dressing.</p></div>
+    </div>
+  </section>
+
+  <!-- ABOUT STORY -->
+  <section class="about-story">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">The Narrative</span>
+      <h2 class="section-title">From Atelier<br>to <em>World Stage</em></h2>
+    </div>
+    <div class="about-story-grid">
+      <div class="about-photos-wrap reveal-left">
+        <div class="about-photo-main">
+          <img
+            src="https://images.unsplash.com/photo-1594938298603-c8148c4b8bc4?w=700&q=90&fit=crop&crop=top"
+            alt="Maison Élara designer at work" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=700&q=90&fit=crop&crop=top'"
+          />
+        </div>
+        <div class="about-photo-secondary">
+          <img
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=700&q=90&fit=crop&crop=center"
+            alt="Elegant fashion detail" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558171813-2cb18f96b53e?w=700&q=90&fit=crop&crop=top'"
+          />
+        </div>
+      </div>
+      <div class="about-story-text reveal-right">
+        <p>Maison Élara was born in 2008 from the imagination of Élara Voss — a textile artist who grew frustrated with fashion's obsession with spectacle. She rented a small atelier in the 6th arrondissement of Paris and began making garments the way she believed they should be made: slowly, carefully, with reverence.</p>
+        <p>Her first collection was fourteen pieces — twelve women's and two men's. She sold each one personally, hand-delivering them to clients in Paris and Berlin. Word spread quietly, the way real luxury does.</p>
+        <p>Today, Maison Élara shows in Paris and New York, but the atelier remains in the same building on Rue du Dragon. Every collection is still reviewed by Élara herself before a single piece leaves the studio.</p>
+        <div class="stats-row stagger">
+          <div><div class="stat-num">14</div><div class="stat-label">Countries</div></div>
+          <div><div class="stat-num">17</div><div class="stat-label">Collections</div></div>
+          <div><div class="stat-num">8K+</div><div class="stat-label">Clients</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL STRIP — 4 COLUMNS -->
+  <section style="padding:0;background:var(--espresso);">
+    <div class="editorial-strip stagger">
+      <div class="editorial-frame">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=90&fit=crop&crop=top"
+          alt="Editorial 1" loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=90&fit=crop&crop=top'"/>
+        <div class="editorial-caption">Womenswear</div>
+      </div>
+      <div class="editorial-frame">
+        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=90&fit=crop&crop=top"
+          alt="Editorial 2" loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=90&fit=crop&crop=top'"/>
+        <div class="editorial-caption">Menswear</div>
+      </div>
+      <div class="editorial-frame">
+        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=500&q=90&fit=crop&crop=top"
+          alt="Editorial 3" loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=90&fit=crop&crop=top'"/>
+        <div class="editorial-caption">New Season</div>
+      </div>
+      <div class="editorial-frame">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=90&fit=crop&crop=top"
+          alt="Editorial 4" loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558171813-2cb18f96b53e?w=500&q=90&fit=crop&crop=top'"/>
+        <div class="editorial-caption">The Edit</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter"><div class="reveal" style="max-width:540px;margin:0 auto;"><span class="section-label">Stay Connected</span><h2 class="section-title">Elevate Your<br><em>Inbox</em></h2><p class="newsletter-sub">Exclusive previews, private sales, and editorials curated for the discerning few.</p><div class="newsletter-form"><input type="email" class="newsletter-input" id="nl-about" placeholder="Your email address"/><button class="newsletter-submit" onclick="handleNewsletter('nl-about')">Subscribe</button></div></div></section>
+  <footer><div class="footer-top"><div><div class="footer-brand-name">Maison Élara</div><p class="footer-tagline">Quiet luxury. Conscious craft. Timeless by design.</p><div class="footer-socials"><a class="social-link">In</a><a class="social-link">Pi</a><a class="social-link">Tw</a><a class="social-link">Fb</a></div></div><div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a onclick="navigate('home')">Home</a></li><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('products')">Shop</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div><div class="footer-col-title">Collections</div><ul class="footer-links"><li><a>Womenswear</a></li><li><a>Menswear</a></li><li><a>New Arrivals</a></li><li><a>Sale</a></li></ul></div><div><div class="footer-col-title">Support</div><ul class="footer-links"><li><a>Size Guide</a></li><li><a>Shipping</a></li><li><a>Returns</a></li><li><a>Privacy</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 Maison Élara. All rights reserved.</span><span class="footer-copy">Paris · London · New York</span></div></footer>
+</div><!-- /about -->
+
+
+<!-- ═══════════════════════════════════
+     PRODUCTS PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-products">
+
+  <!-- SHOP HERO BANNER -->
+  <div class="shop-hero">
+    <img
+      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=90&fit=crop&crop=top"
+      alt="Maison Élara boutique — shop editorial"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=90&fit=crop'"
+    />
+    <div class="shop-hero-overlay">
+      <div class="reveal">
+        <span class="section-label" style="color:var(--accent-light);">The Boutique</span>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;color:var(--cream);letter-spacing:0.04em;line-height:1.1;">Our <em>Collection</em></h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="products-section">
+    <div class="filter-bar reveal" id="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="women">Women</button>
+      <button class="filter-btn" data-filter="men">Men</button>
+      <button class="filter-btn" data-filter="new">New Arrivals</button>
+      <button class="filter-btn" data-filter="sale">Sale</button>
+    </div>
+    <div class="products-grid stagger" id="products-grid"></div>
+  </section>
+
+  <section class="newsletter"><div class="reveal" style="max-width:540px;margin:0 auto;"><span class="section-label">Stay Connected</span><h2 class="section-title">Elevate Your<br><em>Inbox</em></h2><p class="newsletter-sub">First access to new arrivals and private sales.</p><div class="newsletter-form"><input type="email" class="newsletter-input" id="nl-shop" placeholder="Your email address"/><button class="newsletter-submit" onclick="handleNewsletter('nl-shop')">Subscribe</button></div></div></section>
+  <footer><div class="footer-top"><div><div class="footer-brand-name">Maison Élara</div><p class="footer-tagline">Quiet luxury. Conscious craft. Timeless by design.</p><div class="footer-socials"><a class="social-link">In</a><a class="social-link">Pi</a><a class="social-link">Tw</a><a class="social-link">Fb</a></div></div><div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a onclick="navigate('home')">Home</a></li><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('products')">Shop</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div><div class="footer-col-title">Collections</div><ul class="footer-links"><li><a>Womenswear</a></li><li><a>Menswear</a></li><li><a>New Arrivals</a></li><li><a>Sale</a></li></ul></div><div><div class="footer-col-title">Support</div><ul class="footer-links"><li><a>Size Guide</a></li><li><a>Shipping</a></li><li><a>Returns</a></li><li><a>Privacy</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 Maison Élara. All rights reserved.</span><span class="footer-copy">Paris · London · New York</span></div></footer>
+</div><!-- /products -->
+
+
+<!-- ═══════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-contact">
+
+  <div class="contact-hero">
+    <img class="contact-hero-bg"
+      src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1800&q=90&fit=crop&crop=center"
+      alt="Contact Maison Élara — fashion editorial"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1800&q=90&fit=crop'"
+    />
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content reveal"><h1>Get in <em>Touch</em></h1></div>
+  </div>
+
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <span class="section-label">Reach Us</span>
+        <h2 class="section-title" style="font-size:2rem;margin-bottom:1.5rem;">Let's <em>Connect</em></h2>
+        <p style="font-size:.85rem;font-weight:300;color:var(--text-muted);line-height:1.8;margin-bottom:2.5rem;">Whether you have a question about a piece, a bespoke inquiry, or simply wish to know more about the Maison — we are always glad to hear from you.</p>
+        <div class="contact-detail"><span class="contact-detail-label">Atelier Address</span><div class="contact-detail-value">12 Rue du Dragon<br>75006 Paris, France</div></div>
+        <div class="contact-detail"><span class="contact-detail-label">Email</span><div class="contact-detail-value">hello@maisonelara.com</div></div>
+        <div class="contact-detail"><span class="contact-detail-label">Phone</span><div class="contact-detail-value">+33 1 45 67 89 10</div></div>
+        <div class="contact-detail"><span class="contact-detail-label">Atelier Hours</span><div class="contact-detail-value">Monday – Friday: 10:00 – 18:00<br>Saturday: By appointment</div></div>
+        <div class="map-photo-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=90&fit=crop&crop=center"
+            alt="Paris — Rue du Dragon atelier location" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1524396309943-e03f5249f002?w=800&q=90&fit=crop&crop=center'"
+          />
+          <div class="map-photo-label"><div class="pin-dot"></div><span>12 Rue du Dragon, Paris</span></div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="contact-form-card">
+          <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" id="contact-name" placeholder="Élara Voss"/></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" id="contact-email" placeholder="hello@yourmail.com"/></div>
+          <div class="form-group"><label class="form-label">Subject</label><input type="text" class="form-input" id="contact-subject" placeholder="Bespoke Inquiry"/></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" id="contact-msg" placeholder="Tell us how we can help..."></textarea></div>
+          <button class="form-submit" onclick="handleContact()"><span id="submit-text">Send Message</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-top"><div><div class="footer-brand-name">Maison Élara</div><p class="footer-tagline">Quiet luxury. Conscious craft. Timeless by design.</p><div class="footer-socials"><a class="social-link">In</a><a class="social-link">Pi</a><a class="social-link">Tw</a><a class="social-link">Fb</a></div></div><div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a onclick="navigate('home')">Home</a></li><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('products')">Shop</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div><div class="footer-col-title">Collections</div><ul class="footer-links"><li><a>Womenswear</a></li><li><a>Menswear</a></li><li><a>New Arrivals</a></li><li><a>Sale</a></li></ul></div><div><div class="footer-col-title">Support</div><ul class="footer-links"><li><a>Size Guide</a></li><li><a>Shipping</a></li><li><a>Returns</a></li><li><a>Privacy</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 Maison Élara. All rights reserved.</span><span class="footer-copy">Paris · London · New York</span></div></footer>
+</div><!-- /contact -->
+
+<script src="main.js"></script>
+</body>
+</html>
